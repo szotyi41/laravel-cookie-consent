@@ -35,21 +35,21 @@ function initCookies() {
     }, 310);
 }
 
-function configureCookies(event)  {
+async function configureCookies(event)  {
     event.preventDefault();
-    window.LaravelCookieConsent.configure(new FormData(event.target));
+    await window.LaravelCookieConsent.configure(new FormData(event.target));
     close();
 }
 
-function acceptAllCookies(event) {
+async function acceptAllCookies(event) {
     event.preventDefault();
-    window.LaravelCookieConsent.acceptAll()
+    await window.LaravelCookieConsent.acceptAll()
     close();
 }
 
-function acceptEssentialsCookies(event) {
+async function acceptEssentialsCookies(event) {
     event.preventDefault();
-    window.LaravelCookieConsent.acceptEssentials()
+    await window.LaravelCookieConsent.acceptEssentials()
     close();
 }
 
